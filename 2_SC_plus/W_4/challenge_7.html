@@ -1,0 +1,49 @@
+<form action="/submit">
+    <label for="name">Enter your name: </label>
+    <input type="text" placeholder="Your name" name="name" id="name" required />
+    <label for="email">Enter your email: </label>
+    <input type="email" placeholder="Your email" name="email" id="email" required />
+    <input type="submit" value="Subscribe!" />
+</form>
+
+<form>
+    <input type="text" id="email" />
+</form>
+<script>
+
+    function signUp(event) {
+        event.preventDefault();
+        let input = document.querySelector("#email");
+        console.log(input.value);
+    }
+    let form = document.querySelector("form");
+    form.addEventListener("submit", signUp);
+</script>
+
+// challenge 1
+const clickButton = document.getElementById("special-button");
+clickButton.addEventListener("click", function () {
+alert("Hooray!");
+});
+
+// challenge 2
+function showPassword(event) {
+event.preventDefault();
+let passwordInput = document.querySelector("#password-input");
+alert(`🙀 Your super secret password is ${passwordInput.value}`);
+}
+
+let passwordForm = document.querySelector("#password-form");
+passwordForm.addEventListener("submit", showPassword);
+
+// Challenge 3
+function showSignUpFormValues(event) {
+event.preventDefault();
+let emailInput = document.querySelector("#email-input");
+let usernameInput = document.querySelector("#username-input");
+alert(`Your email is ${emailInput.value}`);
+alert(`Your username is ${usernameInput.value}`);
+}
+
+let signUpForm = document.querySelector("#signup-form");
+signUpForm.addEventListener("submit", showSignUpFormValues);
